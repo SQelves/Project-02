@@ -25,7 +25,7 @@ Gifts.init(
     gifts_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'list',
         key: 'id',
       },
     },
