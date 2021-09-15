@@ -21,7 +21,7 @@ List.init(
     list_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'list',
         key: 'id',
       },
     },
