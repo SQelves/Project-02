@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Your Secret Santa Today!</title>
+  <title>WishDash</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -12,20 +12,22 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">(change this l8r)!</a>
-      </h1>
+      
+        <img src="/Project-02/public/images/WishDash-logos.jpeg" class="homeimage"/> 
+        <br><br>
+      <h1 class="header center">Welcome to WishDash></h1>
+
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/homepage">homepage</a> | 
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
+    
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
