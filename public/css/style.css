@@ -28,11 +28,15 @@ body {
 .no-button {
   background: none;
   border: none;
-  padding: 0;
+  padding: 15 px 32px;
   cursor: pointer;
   color: #1b89bc;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
   font-size: 100%;
+  margin: 4px 2px;
+  cursor: pointer; 
 }
 
 .no-button:hover {
