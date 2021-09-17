@@ -4,35 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start Your Secret Santa Today!</title>
+  <title>WishDash</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">(change this l8r)!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+      <h1>Welcome to WishDash</h1>
     </header>
+
+    <nav>
+      <!-- Conditionally render login or logout links -->
+      <a href="/">Home</a>
+      {{#if logged_in}}
+      <a href="/homepage">homepage</a> |
+      <button class="no-button" id="logout">logout</button>
+      {{else}}
+      <a href="/login">login</a>
+      {{/if}}
+    </nav>
+
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
+      <div class="parallax">
+        <img src="/Project-02/public/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
+      </div>
+      <br><br>
+    <div class="hi">
       {{{ body }}}
+    </div>
     </main>
-    <footer>
-      
-    </footer>
   </div>
 
   <!-- Render script for logged in users only -->
@@ -40,5 +44,9 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
+
+<div class="footer">
+  <p> Created by Hannah Dowell, Micah Waweru, and Jessica White - 2021 </p>
+</div>
 
 </html>
