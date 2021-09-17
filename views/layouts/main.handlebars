@@ -16,13 +16,9 @@
       <h1>Welcome to WishDash</h1>
     </header>
 
-    <div class="parallax">
-      <img src="/Project-02/public/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
-    </div>
-    <br><br>
-
     <nav>
       <!-- Conditionally render login or logout links -->
+      <a href="/">Home</a>
       {{#if logged_in}}
       <a href="/homepage">homepage</a> |
       <button class="no-button" id="logout">logout</button>
@@ -31,10 +27,15 @@
       {{/if}}
     </nav>
 
-
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
+      <div class="parallax">
+        <img src="/Project-02/public/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
+      </div>
+      <br><br>
+    <div class="hi">
       {{{ body }}}
+    </div>
     </main>
   </div>
 
