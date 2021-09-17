@@ -2,13 +2,13 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
-  const wishlist_user = document.querySelector('#wishlist-user').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const wishlist_info = document.querySelector('#wishlist-info').value.trim();
+  const description = document.querySelector('#wishlist-desc').value.trim();
 
-  if (name && wishlist_user && description) {
+  if (name && wishlist_info && description) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, wishlist_user, description }),
+      body: JSON.stringify({ name, wishlist_info, description }),
       headers: {
         'Content-Type': 'application/json',
       },
