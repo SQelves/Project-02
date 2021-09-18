@@ -16,6 +16,10 @@ header {
   height: auto;
 }
 
+.parallax-container {  
+  height: 400px!important;
+}
+
 body {
   font-family: Arial;
   margin: 0;
