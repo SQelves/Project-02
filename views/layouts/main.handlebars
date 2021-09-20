@@ -5,57 +5,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WishDash</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/style.css">
+  {{!--
+  <link rel="stylesheet" href="css/materialize.css" type="text/css" media="screen,projection" /> --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>Welcome to WishDash!!!</h1>
-    </header>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+      <img id="logo-container" class="brand-logo" src="/images/WishDash-logos_white.png" alt="logo">
+      {{!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#">Create New Gift Exchange</a></li>
+      </ul> --}}
 
-    <nav>
-      <!-- Conditionally render login or logout links -->
-      <a href="/">Home</a>
-      {{!-- {{#if logged_in}}
-      <a href="/homepage">homepage</a> |
-      <button class="no-button" id="logout">logout</button>
-      {{else}} --}}
-      <a href="/Login">login</a>
-      {{!-- {{/if}} --}}
-      <button type="button" onclick="" value="Wish Now"</a>
-    </nav>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Join Existing Gift Exchange</a></li>
 
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      <div class="parallax-container">
-        <img src="/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
-      </div>
-      <br><br>
-    <div class="hi">
-      {{{ body }}}
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">View Wishlist</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
-    </main>
-  
-  {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
-  {{!-- <aside>
-    <div class=""
-  </aside> --}}
+  </nav>
+  {{!-- Welcome banner --}}
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center green-text text-darken-2">Welcome to WishDash!</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Your home for online gift exchanges</h5>
+        </div>
+        <div class="row center">
+          <a href="/views/login.handlebars" id="download-button"
+            class="btn-large waves-effect waves-light green darken-4">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img class="gift-image" src="/images/gold-gift.jpg" alt="gifts background img 1">
+    </div>
+  </div>
+  {{!-- HOMEPAGE HANDLEBARS --> --}}
+  <div class="container">
+    <div class="section">
+      <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        <div class="parallax-container">
+        </div>
+        <div class="hi">
+          {{{ body }}}
+        </div>
+      </main>
+    </div>
+
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Company Bio</h5>
+            <p class="grey-text text-lighten-4">Made by Hannah Dowell, Jessica White, and Micah Waweru at Northwestern
+              Coding Bootcamp 2021.</p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Connect</h5>
+            <ul>
+              <li><a class="white-text text-lighten-3" href="https://github.com/SQelves/Project-02">SQelves Github</a>
+              </li>
+              <li><a class="white-text" href="#!">Link 2</a></li>
+              <li><a class="white-text" href="#!">Link 3</a></li>
+              <li><a class="white-text" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+    </footer>
 
 
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+
+
+    {{!--
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1>Welcome to WishDash!</h1>
+      </header>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        <a href="/">Home</a>
+        {{!-- {{#if logged_in}}
+        <a href="/homepage">homepage</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}} --}}
+        <a href="/Login">login</a>
+        {{!-- {{/if}} --}}
+        <button type="button" onclick="" value="Wish Now" </a>
+      </nav>
+
+      <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        <div class="parallax-container">
+          <img src="/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
+        </div>
+        <br><br>
+        <div class="hi">
+          {{{ body }}}
+        </div>
+      </main>
+
+      {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
+      {{!-- <aside>
+        <div class="" </aside> --}}
+
+
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+          </nav> --}}
+
+          <!-- Render script for logged in users only -->
+          {{#if logged_in}}
+          <script src="/js/logout.js"></script>
+          {{/if}}
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-<div class="footer">
-  <p> Created by Hannah Dowell, Micah Waweru, and Jessica White - 2021 </p>
-</div>
+{{!-- Scripts --}}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
 
 </html>
