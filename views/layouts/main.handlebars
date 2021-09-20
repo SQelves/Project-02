@@ -19,12 +19,13 @@
     <nav>
       <!-- Conditionally render login or logout links -->
       <a href="/">Home</a>
-      {{#if logged_in}}
+      {{!-- {{#if logged_in}}
       <a href="/homepage">homepage</a> |
       <button class="no-button" id="logout">logout</button>
-      {{else}}
-      <a href="/login">login</a>
-      {{/if}}
+      {{else}} --}}
+      <a href="/Login">login</a>
+      {{!-- {{/if}} --}}
+      <button type="button" onclick="" value="Wish Now"</a>
     </nav>
 
     <main class="container container-fluid mt-5">
@@ -37,7 +38,13 @@
       {{{ body }}}
     </div>
     </main>
-  </div>
+  
+  {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
+  {{!-- <aside>
+    <div class=""
+  </aside> --}}
+
+
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
