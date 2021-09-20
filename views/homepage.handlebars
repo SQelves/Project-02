@@ -1,3 +1,78 @@
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text text-darken-3"><i class="material-icons">receipt_long</i></h2>
+            <h5 class="center">Wishlists</h5>
+
+            <p class="light">Create, view, and edit your wishlist for each gift exchange. Everyone invited to a gift exchange gets to add a present that will be randomly given to another person invited to the event.</p>
+            <a href="/views/createGiftExchange.handlebars" id="download-button" class="btn-large waves-effect waves-light black lighten-1">View Here</a>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text text-darken-3"><i class="material-icons">redeem</i></h2>
+            <h5 class="center">Create a Gift Exchange</h5>
+
+            <p class="light">We understand the holiday season is busy but you don't want to leave any loved ones out of the gift-giving season. Set a date for your event and invite coworkers, friends, or long-distance family. Create a price limit and RSVP deadline. Users can add a gift they're giving and we'll handle the rest.</p>
+            <a href="/views/wishlist.handlebars" id="download-button" class="btn-large waves-effect waves-light black">Create Now</a>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center green-text text-darken-3"><i class="material-icons">person_add</i></h2>
+            <h5 class="center">Join & RSVP to a Gift Exchange</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <a href="/views/joinGiftExchange.handlebars" id="download-button" class="btn-large waves-effect waves-light black">Join Here</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern and efficient way to take the stress out of the holidays.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img class="tree-gift" src="/images/tree-gift" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">More info/another section.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">More info?</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/images/lights" alt="Unsplashed background img 3"></div>
+  </div>
+
+
+
+{{!-- HOMEPAGE FROM MINIPROJECT: --}}
 {{!-- <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="row mb-4 project">
@@ -7,11 +82,6 @@
       {{{get_emoji}}}
       <a href="/project/{{project.id}}">{{project.name}}</a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount"></span>
-      needed!
     </p>
     <p>Created by {{project.user.name}} on </p>
   </div>
