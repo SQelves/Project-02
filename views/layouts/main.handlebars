@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WishDash</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <link  rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="/css/style.css">
+  {{!-- <link rel="stylesheet" href="css/materialize.css" type="text/css" media="screen,projection"/> --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 </head>
 
 <body>
-  <nav class="white" role="navigation">
+  <nav class="black" role="navigation">
     <div class="nav-wrapper container">
-      <img id="logo-container" class="brand-logo" src="/public/images/WishDash-logos_transparent.png" alt="logo">
-      <ul class="right hide-on-med-and-down">
+      <img id="logo-container" class="brand-logo" src="/images/WishDash-logos_white.png" alt="logo">
+      {{!-- <ul class="right hide-on-med-and-down">
         <li><a href="#">Create New Gift Exchange</a></li>
-      </ul>
+      </ul> --}}
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Join Existing Gift Exchange</a></li>
@@ -34,62 +34,65 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Welcome to WishDash!</h1>
+        <h1 class="header center green-text text-darken-2">Welcome to WishDash!</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A place to organize online white elephant gift exchanges</h5>
+          <h5 class="header col s12 light">Your home for online gift exchanges</h5>
         </div>
         <div class="row center">
-          <a href="/views/createGiftExchange.handlebars" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="/views/login.handlebars" id="download-button" class="btn-large waves-effect waves-light green darken-4">Get Started</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-{{!--  --}}
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
+    <div class="parallax"><img class="gift-image" src="/images/gold-gift.jpg" alt="gifts background img 1">
     </div>
   </div>
+{{!--  HOMEPAGE  HANDLEBARS   --> --}}
+  <div class="container">
+    <div class="section">
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      <div class="parallax-container">
+      </div>
+    <div class="hi">
+      {{{ body }}}
+    </div>
+    </main>
+  </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">Made by Hannah Dowell, Jessica White, and Micah Waweru at Northwestern Coding Bootcamp 2021.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text text-lighten-3" href="https://github.com/SQelves/Project-02">SQelves Github</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
 
 
 
 
 
-
-<br><br><br><br><br><br>
+{{!-- 
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>Welcome to WishDash!</h1>
@@ -103,19 +106,7 @@
       {{else}}
       <a href="/login">login</a>
       {{/if}}
-    </nav>
-
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      <div class="parallax-container">
-        <img src="/Project-02/public/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
-      </div>
-      <br><br>
-    <div class="hi">
-      {{{ body }}}
-    </div>
-    </main>
-  </div>
+    </nav> --}}
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
@@ -125,10 +116,7 @@
 
 {{!-- Scripts --}}
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-
-<div class="footer">
-  <p> Created by Hannah Dowell, Micah Waweru, and Jessica White - 2021 </p>
-</div>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+ <script src="js/init.js"></script>
 
 </html>
