@@ -24,19 +24,6 @@ header {
   align-items: center;
 }
 
-.parallax-container {  
-  height: 400px!important;
-}
-
-.parallax {
-  position: static;
-  opacity: 100%;
-}
-
-#gift-image {
-  opacity: 100%;
-}
-
 body {
   font-family: Arial;
   margin: 0;
@@ -101,19 +88,17 @@ p {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
-  opacity: 100%;
+  margin-bottom: 0px;
 }
   .parallax-container .section {
     width: 100%;
+    padding: 0;
   }
 
-  #home-background {
-    zoom: 100%;
-  }
 
-@media only screen and (max-width : 100%) {
+@media only screen and (max-width : 992px) {
   .parallax-container .section {
-    position: static;
+    position: absolute;
     top: 40%;
   }
   #index-banner .section {
@@ -121,11 +106,18 @@ p {
   }
 }
 
-@media only screen and (max-width : 100%) {
+@media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
 }
+
+
+  #parallax-img, #gold-gift, #pink-gift, #gift-1 {
+    opacity: 100%;
+    zoom:10%;
+  }
+
 
 .icon-block {
   padding: 0 15px;
