@@ -29,7 +29,12 @@ header {
 }
 
 .parallax {
-  position:static;
+  position: static;
+  opacity: 100%;
+}
+
+#gift-image {
+  opacity: 100%;
 }
 
 body {
