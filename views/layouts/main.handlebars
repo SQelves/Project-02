@@ -32,23 +32,25 @@
     </div>
   </nav>
   {{!-- Welcome banner --}}
+
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center green-text text-darken-2">Welcome to WishDash!</h1>
+        <h1 class="header center white-text">Welcome to WishDash!</h1>
         <div class="row center">
           <h5 class="header col s12 light">Your home for online gift exchanges</h5>
         </div>
         <div class="row center">
-          <a href="/views/login.handlebars" id="download-button"
+          <a href="/login" id="download-button"
             class="btn-large waves-effect waves-light green darken-4">Get Started</a>
+            <br><br>
         </div>
-        <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img class="gift-image" src="/images/gold-gift.jpg" alt="gifts background img 1">
+    <div class="parallax">
+      <img class="gift-image" id="gold-gift" src="/images/gold-gift.jpg" alt="gifts background img 1">
     </div>
   </div>
   {{!-- HOMEPAGE HANDLEBARS --> --}}
@@ -56,8 +58,6 @@
     <div class="section">
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
-        <div class="parallax-container">
-        </div>
         <div class="hi">
           {{{ body }}}
         </div>
@@ -109,39 +109,44 @@
         <a href="/homepage">homepage</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}} --}}
-        <a href="/Login">login</a>
+        {{!-- <a href="/Login">login</a>
         {{!-- {{/if}} --}}
-        <button type="button" onclick="" value="Wish Now" </a>
+        {{!-- <button type="button" onclick="" value="Wish Now" </a>
       </nav>
 
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         <div class="parallax-container">
-          <img src="/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
+          <img src="/images/flower-gift.jpg" class="homeimage" alt="WishDash">
         </div>
         <br><br>
         <div class="hi">
           {{{ body }}}
         </div>
-      </main>
+      </main> --}} 
 
       {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
       {{!-- <aside>
         <div class="" </aside> --}}
 
 
-          
+{{!--           
           <a href="/login">login</a>
           
           </nav> --}}
 
           <!-- Render script for logged in users only -->
-          {{#if logged_in}}
+          {{!-- {{#if logged_in}}
           <script src="/js/logout.js"></script>
-          {{/if}}
+          {{/if}} --}} 
 </body>
 
 {{!-- Scripts --}}
+<script>
+  $(document).ready(function(){
+  $('.parallax').parallax();
+});
+</script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/init.js"></script>
