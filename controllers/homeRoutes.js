@@ -76,4 +76,16 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/createGiftExchange', (req, res)=>{
+  res.render('createGiftExchange')
+});
+
+router.get('/wishlist', (req, res)=>{
+  res.render('wishlist')
+});
+
+router.get('/joinGiftExchange', (req, res)=>{
+  res.render('joinGiftExchange')
+});
+
 module.exports = router;
