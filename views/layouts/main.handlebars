@@ -41,14 +41,15 @@
           <h5 class="header col s12 light">Your home for online gift exchanges</h5>
         </div>
         <div class="row center">
-          <a href="/views/login.handlebars" id="download-button"
+          <a href="/login" id="download-button"
             class="btn-large waves-effect waves-light green darken-4">Get Started</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img class="gift-image" src="/images/gold-gift.jpg" alt="gifts background img 1">
+    <div >
+      <img class="gift-image" id="gift-1" src="/images/gold-gift.jpg" alt="gifts background img 1">
     </div>
   </div>
   {{!-- HOMEPAGE HANDLEBARS --> --}}
@@ -109,36 +110,36 @@
         <a href="/homepage">homepage</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}} --}}
-        <a href="/Login">login</a>
+        {{!-- <a href="/Login">login</a>
         {{!-- {{/if}} --}}
-        <button type="button" onclick="" value="Wish Now" </a>
+        {{!-- <button type="button" onclick="" value="Wish Now" </a>
       </nav>
 
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         <div class="parallax-container">
-          <img src="/images/WishDash-logos.jpeg" class="homeimage" alt="WishDash">
+          <img src="/images/flower-gift.jpg" class="homeimage" alt="WishDash">
         </div>
         <br><br>
         <div class="hi">
           {{{ body }}}
         </div>
-      </main>
+      </main> --}} 
 
       {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
       {{!-- <aside>
         <div class="" </aside> --}}
 
 
-          
+{{!--           
           <a href="/login">login</a>
           
           </nav> --}}
 
           <!-- Render script for logged in users only -->
-          {{#if logged_in}}
+          {{!-- {{#if logged_in}}
           <script src="/js/logout.js"></script>
-          {{/if}}
+          {{/if}} --}} 
 </body>
 
 {{!-- Scripts --}}
