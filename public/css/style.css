@@ -20,10 +20,16 @@ header {
   height: 115%;
   margin-bottom: 50em;
   width: auto;
+  display: flex;
+  align-items: center;
 }
 
 .parallax-container {  
   height: 400px!important;
+}
+
+.parallax {
+  position:static;
 }
 
 body {
@@ -102,7 +108,7 @@ p {
 
 @media only screen and (max-width : 100%) {
   .parallax-container .section {
-    position: absolute;
+    position: static;
     top: 40%;
   }
   #index-banner .section {
