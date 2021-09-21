@@ -1,6 +1,6 @@
-<div class="formContainer card green darken-3">
-        <form id="createForm" class="card-content white-text">
-            <span class="card-title">Join An Existing Gift Exchange</span>
+<div class="formContainer card">
+        <form id="createForm" class="card-content">
+            <span class="card-title">Create a New Gift Exchange</span>
             <label for="giftExchangeName">Gift Exchange Name</label>
             <input type="text" id="giftExchangeName">
             <br>
@@ -13,6 +13,11 @@
             <label for="RSVPDeadline">RSVP Deadline (Names will be drawn the following day)</label>
             <input type="date" id="RSVP" name="date" value="2021-11-25">
             <br>
+            <label for="hostFirstName">First Name</label>
+            <input type="text" id="hostFirstName">
+            <br>
+            <label for="hostLastName">Last Name</label>
+            <input type="text" id="hostLastName">
             <label for="participate">Are you participating?</label>
             <select name="participate" id="participate">
               <option value="yes">Yes, can't wait!</option>
@@ -25,7 +30,7 @@
             <label for="message">Anything else you'd like to tell everyone?</label>
             <textarea id="message" name="message" rows="4" cols="50"></textarea>
             <br>
-            <button id="submitBtn">Submit</button>
+            <button id="createExchangeBtn">Submit</button>
     </div>
         </form>
 

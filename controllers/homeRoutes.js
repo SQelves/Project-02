@@ -4,18 +4,11 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
-      include: [User],
-    });
-
-    // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
-
+    
     // Pass serialized data and session flag into template
     res.render('homepage', 
     { 
-      projects, 
+      projects: [], 
       //logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -74,6 +67,18 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/createGiftExchange', (req, res)=>{
+  res.render('createGiftExchange')
+});
+
+router.get('/wishlist', (req, res)=>{
+  res.render('wishlist')
+});
+
+router.get('/joinGiftExchange', (req, res)=>{
+  res.render('joinGiftExchange')
 });
 
 module.exports = router;
