@@ -1,48 +1,32 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{user}}!</h2>
+    <p>You have _ wishes & _ gift exchanges.</p>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+<div class="row mt-4" "col-md-6">
+  <div class="row">
+    <div class="column">
+      <h3>WISHLISTS:</h3>
+    {{!-- add something that base it off of user's input --}}
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">name:</label>
-        <input class="form-input" type="text" id="wishlist-name" name="wishlist-name" />
-      </div>
-      <div class="form-group">
-        <label for="wishlist_info">wishlist:</label>
-        <input class="form-input" type="number" id="wishlist_info" name="wishlist_info" />
-      </div>
-      <div class="form-group">
-        <label for="wishlist-desc">description:</label>
-        <textarea class="form-input" id="wishlistt-desc" name="wishlist-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
-
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Wishlists:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
+      <button type="submit" class="btn btn-primary">Add to Wishlist</button>
     </div>
-    {{/each}}
+
+    <div class="column">
+      <h3>GIFT EXCHANGES:</h3>
+
+      {{!-- add something that base it off of user's input --}}
+
+      <button type="submit" class="btn btn-primary">Start a Gift Exchange</button>
+    </div>
+
+    <div class="column">
+      <h3>GIFT IDEAS:</h3>
+      {{!-- add sample gifts or something? --}}
+    </div>
   </div>
-  {{/if}}
 </div>
 
-<script src="./js/profile.js"></script>
+<script src="/public/js/profile.js"></script>
