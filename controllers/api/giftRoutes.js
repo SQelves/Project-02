@@ -17,6 +17,10 @@ router.post('/newGift', (req, res)=>{
     });
 });
 
-
+router.get('/displayGifts', async(req, res)=>{
+    const giftsData = await Gift.findAll();
+    console.log(giftsData);
+    return res.json(giftsData);
+})
 
 module.exports = router;

@@ -4,19 +4,20 @@
   </div>
 </div>
 
-  {{#if wishlist.length}}
+  
   <div class="col-md-6 project-list">
-    <h3>Your Wishlists:</h3>
+    <h3>Exchange Name</h3>
 
-    {{#each wishlists as |wishlist|}}
+   
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{wishlist.id}}">{{wishlist.name}}</a></h4>
+        <h4>Gifts</h4>
+        <ul id="giftList"></ul>
       </div>
     </div>
-    {{/each}}
+   
   </div>
-  {{/if}}
+  
 </div>
 
-<script src="/public/js/wishlist.js"></script>
+<script src="/js/wishlist.js"></script>
