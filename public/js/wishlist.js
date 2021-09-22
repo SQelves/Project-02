@@ -1,15 +1,17 @@
-const newFormHandler = async (event) => {
+const wishlistFormHandler = async (event) => {
     event.preventDefault();
   
-    const wishlistName = document.querySelector('#wishlist-name').value.trim();
-    const wishlistInfo = document.querySelector('#wishlist-info').value.trim();
+    const wishlistName = document.querySelector('#wishlistName').value.trim();
     const wishlistPriceLimit = document.querySelector('#wishlistPriceLimit').value.trim();
+    const wishlistRules = document.querySelector('#wishlistRules').value.trim();
+    const wishlistRSVP = document.querySelector('#wishlistRSVP').value.trim();
+    const wishlistExchangeDate = document.querySelector('#wishlistExchangeDate').value.trim();
     const wishlistDescription = document.querySelector('#wishlist-desc').value.trim();
   
-    if (wishlistName && wishlistInfo && wishlistPriceLimit && wishlistDescription) {
+    if (wishlistName && wishlistPriceLimit && wishlistRules && wishlistRSVP && wishlistExchangeDate && wishlistDescription) {
       const response = await fetch(`/api/projects`, {
         method: 'POST',
-        body: JSON.stringify({ wishlistName, wishlistInfo, wishlistPriceLimit, wishlistDescription }),
+        body: JSON.stringify({ wishlistName, wishlistPriceLimit, wishlistRules, wishlistRSVP, wishlistExchangeDate, wishlistDescription }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -22,4 +24,9 @@ const newFormHandler = async (event) => {
       }
     }
   };
+
+
+  document
+  .querySelector('#new-wishlist-form')
+  .addEventListener('submit', wishlistFormHandler);
   
