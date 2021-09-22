@@ -1,23 +1,24 @@
-const newFormHandler = async (event) => {
+const profileFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const wishlist_info = document.querySelector('#wishlist-info').value.trim();
-  const description = document.querySelector('#wishlist-desc').value.trim();
+  const name = document.querySelector('#profileName').value.trim();
+  const wishlist = document.querySelector('#profileWishlist').value.trim();
+  const giftExchanges = document.querySelector('#profileGiftExchanges').value.trim();
+  const giftIdeas = document.querySelector('#profileGiftIdeas').value.trim();
 
-  if (name && wishlist_info && description) {
+  if (name && wishlist && giftExchanges && giftIdeas) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, wishlist_info, description }),
+      body: JSON.stringify({ name, wishlist, giftExchanges, giftIdeas }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to create wishlist');
+  if (response.ok) {
+    document.location.replace('/profile');
+  } else {
+     alert('Failed to create wishlist');
     }
   }
 };
@@ -39,9 +40,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('#new-profile-form')
+  .addEventListener('submit', profileFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('#profile-list')
   .addEventListener('click', delButtonHandler);
