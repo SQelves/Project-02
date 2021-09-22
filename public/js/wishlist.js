@@ -1,32 +1,33 @@
-const wishlistFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const wishlistName = document.querySelector('#wishlistName').value.trim();
-    const wishlistPriceLimit = document.querySelector('#wishlistPriceLimit').value.trim();
-    const wishlistRules = document.querySelector('#wishlistRules').value.trim();
-    const wishlistRSVP = document.querySelector('#wishlistRSVP').value.trim();
-    const wishlistExchangeDate = document.querySelector('#wishlistExchangeDate').value.trim();
-    const wishlistDescription = document.querySelector('#wishlist-desc').value.trim();
-  
-    if (wishlistName && wishlistPriceLimit && wishlistRules && wishlistRSVP && wishlistExchangeDate && wishlistDescription) {
-      const response = await fetch(`/api/projects`, {
-        method: 'POST',
-        body: JSON.stringify({ wishlistName, wishlistPriceLimit, wishlistRules, wishlistRSVP, wishlistExchangeDate, wishlistDescription }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/wishlist');
-      } else {
-        alert('Failed to create wishlist');
-      }
+console.log('Wish Script attached');
+
+const giftList = document.getElementById('giftList');
+
+const displayGifts = function(){
+  fetch('/api/gifts/displayGifts',{
+    "method": "GET",
+    "headers":{
+      'Content-Type': 'application/json'
     }
-  };
-
-
-  document
-  .querySelector('#new-wishlist-form')
-  .addEventListener('submit', wishlistFormHandler);
+  })
+  .then(
+    function(response){
+      response.json().then(function(data){
+        for(i=0;i<data.length;i++){
+          var giftName = data[i].name;
+          var giftDesc = data[i].description;
+          giftItem = `Gift Name: ${giftName} Description: ${giftDesc}`;
+          console.log(giftItem);
+          var appendItem = document.createElement('li');
+          appendItem.innerHTML = giftItem;
+          giftList.appendChild(appendItem);
+          console.log(giftList);
+        }
+      });
+    }
+  )
+  .catch(function(err){
+    console.log('Fetch Error :-S', err);
+  });
+}
   
+displayGifts();

@@ -1,7 +1,7 @@
 
 console.log("Gift Exchange Script attached");
 
-const submitBtn = document.getElementById('submitBtn');
+const submitBtn = document.getElementById('joinExchangeBtn');
 
 submitBtn.addEventListener('click', function(event){
     event.preventDefault();

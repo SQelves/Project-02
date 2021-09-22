@@ -1,34 +1,33 @@
-const createExchangeFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const name = document.querySelector('#giftExchangeName').value.trim();
-    const date = document.querySelector('#giftExchangeDate').value.trim();
-    const time = document.querySelector('#giftExchangeTime').value.trim();
-    const RSVP = document.querySelector('#RSVPDeadline').value.trim();
-    const hostFirstName = document.querySelector('#hostFirstName').value.trim();
-    const hostLastName = document.querySelector('#hostLastName').value.trim();
-    const participate = document.querySelector('#participate').value.trim();
-    const budget = document.querySelector('#budget').value.trim();
-    const message = document.querySelector('#message').value.trim();
-  
-    if (name && date && time && RSVP && hostFirstName && hostLastName && participate && budget && message) {
-      const response = await fetch(`/api/homeRoutes`, {
-        method: 'POST',
-        body: JSON.stringify({ name, date, time, RSVP, hostFirstName, hostLastName, participate, budget, message }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/createGiftExchange');
-      } else {
-        alert('Failed to create new Gift Exchange');
-      }
-    }
-  };
+console.log('CreateGiftExchange Script attached')
 
-  document
-  .querySelector('#createExchangeBtn')
-  .addEventListener('submit', createExchangeFormHandler);
+const createExchangeBtn = document.getElementById('createExchangeBtn')
+
+ createExchangeBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    console.log("form submit clicked");
+
+    var giftExchangeName = document.getElementById('giftExchangeName').value;
+    var hostFirstName = document.getElementById('hostFirstName').value;
+    var hostLastName = document.getElementById('hostLastName').value;
+    var org = hostFirstName + hostLastName;
+    var budget = document.getElementById('budget').value;
+    let postRoute = '/api/exchanges/newExchange';
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", postRoute, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({
+      exchangeName: giftExchangeName,
+      exchangeOrg: org,
+      exchangeBudget: budget
+
+    }));
+    
+    
+
+  });
+
   
+  // document
+  // .querySelector('#createExchangeBtn')
+  // .addEventListener('submit', createExchangeFormHandler);
