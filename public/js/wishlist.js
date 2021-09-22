@@ -27,6 +27,6 @@ const wishlistFormHandler = async (event) => {
 
 
   document
-  .querySelector('.new-wishlist-form')
+  .querySelector('#new-wishlist-form')
   .addEventListener('submit', wishlistFormHandler);
   
