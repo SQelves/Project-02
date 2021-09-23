@@ -30,4 +30,28 @@ const displayGifts = function(){
   });
 }
   
+
+const displayUsers = function(){
+  fetch('/api/users/displayUsers',{
+    "method": "GET",
+    "headers":{
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(
+    function(response){
+      response.json().then(function(data){
+      for(i=0;i<data.length;i++){
+        var userItems = data[i].name;
+        console.log(userItems);
+      }
+      });
+    }
+  )
+  .catch(function(err){
+    console.log('Fetch Error :-S', err);
+  });
+}
+
 displayGifts();
+displayUsers();

@@ -1,3 +1,7 @@
+console.log("Logout script attached");
+
+const logoutBtn = document.getElementById('logoutBtn');
+
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
@@ -11,4 +15,4 @@ const logout = async () => {
   }
 };
 
-document.querySelector('#logout').addEventListener('click', logout);
+logoutBtn.addEventListener('click', logout);

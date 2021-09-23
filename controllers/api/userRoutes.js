@@ -63,4 +63,10 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/displayUsers', async(req, res)=>{
+  const usersData = await User.findAll();
+  console.log(usersData); 
+  return res.json(usersData)
+})
+
 module.exports = router;
