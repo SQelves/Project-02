@@ -1,30 +1,30 @@
-const joinExchangeFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const userFirstName = document.querySelector('#userFirstName').value.trim();
-    const userLastName = document.querySelector('#userLastName').value.trim();
-    const dashesList = document.querySelector('#dashesList').value.trim();
-    const giftName = document.querySelector('#giftName').value.trim();
-    const giftDesc = document.querySelector('#giftDesc').value.trim();
-    const price = document.querySelector('#price').value.trim();
-  
-    if (userFirstName && userLastName && dashesList && giftName && giftDesc && price) {
-      const response = await fetch(`/api/homeRoutes`, {
-        method: 'POST',
-        body: JSON.stringify({ userFirstName, userLastName, dashesList, giftName, giftDesc, price}),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/createGiftExchange');
-      } else {
-        alert('Failed to join Gift Exchange');
-      }
-    }
-  };
+console.log('Join Script attached');
 
-  document
-  .querySelector('#joinExchangeBtn')
-  .addEventListener('submit', joinExchangeFormHandler);
+const dashesList = document.getElementById('dashesList');
+
+const displayExchanges = function(){
+  fetch('/api/exchanges/displayExchanges', {
+    "method": "GET",
+    "headers":{
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(
+    function(response){
+      response.json().then(function(data){
+        for(i=0;i<data.length;i++){
+          var exchangeItems = data[i].exchangeName;
+          var appendItem = document.createElement('option');
+          appendItem.value = exchangeItems;
+          dashesList.appendChild(appendItem)
+          console.log(dashesList);
+        }
+      });
+    }
+  )
+  .catch(function(err){
+    console.log('Fetch Error :-S', err);
+  });
+}
+
+displayExchanges();
