@@ -1,15 +1,3 @@
-/* Main/Homepage styling */
-body {
-  font-family: Arial;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: flex-start;
-}
-
-
-/* Navbar Styling */
 header {
   border-bottom: 1px solid #ccc;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -21,45 +9,34 @@ header {
   color: #fff;
 }
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+.homeimage {
+  border: 2px solid red;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
 }
 
-.sidenav-trigger {
-  color: white;
-}
-
-
-/* Header/Banner styling */
-#index-banner {
+.brand-logo {
+  height: 115%;
+  margin-bottom: 50em;
+  width: auto;
   display: flex;
   align-items: center;
 }
 
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
 
 #download-button-banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-  margin-bottom: 0px;
-}
-  .parallax-container .section {
-    width: 100%;
-    padding: 0;
-  }
-
-.home3 {
-  display: flex;
-  justify-content: center;
-  margin: 0px 85px;
 }
 
 .no-button {
@@ -81,33 +58,10 @@ nav .brand-logo {
   text-decoration: underline;
 }
 
-.homeimage {
-  border: 2px solid red;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-}
+/* #logout {
 
-.brand-logo {
-  height: 115%;
-  margin-bottom: 50em;
-  width: auto;
-  display: flex;
-  align-items: center;
-}
+} */
 
-p {
-  line-height: 2rem;
-}
-
-/* Images styling (ID's to override Materialize) */
-#parallax-img, #gold-gift, #pink-gift, #tree-gift, #gifts1 {
-  opacity: 100%;
-  zoom:10%;
-}
-
-
-/* Footer styling */
 .footer {
   position: absolute;
   left: 0; 
@@ -119,12 +73,35 @@ p {
   text-align: center;
 }
 
-footer.page-footer {
-  margin: 0;
+
+/* template css */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
 }
 
+p {
+  line-height: 2rem;
+}
 
-/* Responsive layout styling */
+.sidenav-trigger {
+  color: white;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 0px;
+}
+  .parallax-container .section {
+    width: 100%;
+    padding: 0;
+  }
+
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
@@ -150,12 +127,22 @@ footer.page-footer {
   }
 }
 
-/* Homepage Column styling */
+
+#parallax-img, #gold-gift, #pink-gift, #tree-gift, #gifts1 {
+    opacity: 100%;
+    zoom:10%;
+}
+
+
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
   font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }
 
 /* column and row goes with profile.handlebars */
