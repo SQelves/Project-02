@@ -11,18 +11,23 @@ const seedDatabase = async () => {
   const user = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
-  });
+  })
+  .then((res) => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err);
+  })
 
-  for (const list of listData) {
-    await Project.create({
-      ...list,
-      // user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  
   for (const gifts of giftsData) {
     await Gifts.create({
       ...gifts,
-    });
+    })
+    .then((res) => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   process.exit(0);
