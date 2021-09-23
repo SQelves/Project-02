@@ -112,6 +112,15 @@ p {
   }
 }
 
+@media only screen and (max-width : 500px) {
+  h1.header.center.white-text {
+    font-size: 3.4rem;
+  }
+  h5.header.center.col {
+    font-size: 1.5rem;
+  }
+}
+
 
 #parallax-img, #gold-gift, #pink-gift, #tree-gift, #gifts1 {
     opacity: 100%;
