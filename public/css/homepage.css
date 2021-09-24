@@ -2,3 +2,14 @@
     text-align: center;
     size: 35px;
 }
+
+
+@media only screen and (max-width : 600px) {
+    .header-col-s12-light {
+        text-align: center;
+        size: 15px;
+    }
+  }
+
+
+
