@@ -39,6 +39,10 @@ body {
   margin-right: auto;
 }
 
+.container.welcome {
+  padding: 8em;
+}
+
 .no-button {
   background: none;
   border: none;
@@ -102,31 +106,27 @@ p {
   }
 
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
+/* @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
   }
-}
 
-@media only screen and (max-width : 500px) {
+  .container.welcome {
+    padding: 0px;
+    font-size: 10px;
+  }
+} */
+
+@media only screen and (max-width : 700px) {
   h1.header.center.white-text {
     font-size: 3.4rem;
   }
-  h5.header.center.col {
-    font-size: 1.5rem;
+
+  #about-banner {
+      position: relative;
+      top: 100px;
   }
 }
-
 
 #parallax-img, #pink-gift, #tree-gift, #gifts1 {
     opacity: 100%;
@@ -134,11 +134,12 @@ p {
 }
 
 #bell-gift {
-  zoom: 25%;
+  opacity: 100%;
+  zoom:80%;
 }
 
-.header h2 {
-
+#aboutImg, #footerImg {
+  text-shadow: 5px 5px 10px gray;
 }
 
 .icon-block {
@@ -163,4 +164,13 @@ footer.page-footer {
   content: "";
   display: table;
   clear: both;
+}
+
+/* login.handlebars */
+.col.s3.card {
+  margin: 2rem;
+}
+
+h2.card-title {
+  margin: 2rem;
 }
