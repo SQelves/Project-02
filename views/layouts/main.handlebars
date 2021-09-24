@@ -13,21 +13,36 @@
 </head>
 
 <body>
+  {{!-- Navbar --}}
   <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a href="/"> <img id="logo-container" class="brand-logo" src="/images/WishDash-logos_white.png" alt="logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
 
+      <ul class="right hide-on-med-and-down">
+        <li><a class="text-white" href="/login">Login</a></li>
+        <li><a class="text-white" href="/wishlist">Wishlist</a></li>
+        <li><a class="text-white" href="/createGiftExchange">Create Exchange</a></li>
+        <li><a class="text-white" href="/joinGiftExchange">Join Exchange</a></li>
       </ul>
 
     </div>
   </nav>
 
-
+<ul id="mobile-demo" class="sidenav black">
+    <li><a class="text-white" href="/login">Login</a></li>
+    <li><a class="text-white" href="/wishlist">Wishlist</a></li>
+    <li><a class="text-white" href="/createGiftExchange">Create Exchange</a></li>
+    <li><a class="text-white" href="/joinGiftExchange">Join Exchange</a></li>
+</ul>
 
   {{!-- Welcome banner --}}
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
+        <div class="parallax">
+          <img class="gift-image" id="bell-gift" src="/images/bell-gift.jpg" alt="gifts background img 1">
+        </div>
       <div class="container">
         <br><br>
         <h1 class="header center white-text">Welcome to WishDash!</h1>
@@ -41,9 +56,6 @@
         </div>
 
       </div>
-    </div>
-    <div class="parallax">
-      <img class="gift-image" id="gold-gift" src="/images/gold-gift.jpg" alt="gifts background img 1">
     </div>
   </div>
   {{!-- HOMEPAGE HANDLEBARS --> --}}
