@@ -13,21 +13,36 @@
 </head>
 
 <body>
+  {{!-- Navbar --}}
   <nav class="black" role="navigation">
     <div class="nav-wrapper container">
       <a href="/"> <img id="logo-container" class="brand-logo" src="/images/WishDash-logos_white.png" alt="logo"></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons white-text">menu</i></a>
 
+      <ul class="right hide-on-med-and-down">
+        <li><a class="text-white" href="/login">Login</a></li>
+        <li><a class="text-white" href="/wishlist">Wishlist</a></li>
+        <li><a class="text-white" href="/createGiftExchange">Create Exchange</a></li>
+        <li><a class="text-white" href="/joinGiftExchange">Join Exchange</a></li>
       </ul>
 
     </div>
   </nav>
 
-
+<ul id="mobile-demo" class="sidenav black">
+    <li><a class="text-white" href="/login">Login</a></li>
+    <li><a class="text-white" href="/wishlist">Wishlist</a></li>
+    <li><a class="text-white" href="/createGiftExchange">Create Exchange</a></li>
+    <li><a class="text-white" href="/joinGiftExchange">Join Exchange</a></li>
+</ul>
 
   {{!-- Welcome banner --}}
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
+        <div class="parallax">
+          <img class="gift-image" id="bell-gift" src="/images/bell-gift.jpg" alt="gifts background img 1">
+        </div>
       <div class="container">
         <br><br>
         <h1 class="header center white-text">Welcome to WishDash!</h1>
@@ -41,9 +56,6 @@
         </div>
 
       </div>
-    </div>
-    <div class="parallax">
-      <img class="gift-image" id="gold-gift" src="/images/gold-gift.jpg" alt="gifts background img 1">
     </div>
   </div>
   {{!-- HOMEPAGE HANDLEBARS --> --}}
@@ -85,68 +97,6 @@
             </div>
           </div>
   </footer>
-
-
-
-
-
-  {{!--
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>Welcome to WishDash!</h1>
-    </header>
-    <nav>
-      <!-- Conditionally render login or logout links -->
-      <a href="/">Home</a>
-      {{!-- {{#if logged_in}}
-      <a href="/homepage">homepage</a> |
-      <button class="no-button" id="logout">logout</button>
-      {{else}} --}}
-      {{!-- <a href="/Login">login</a>
-      {{!-- {{/if}} --}}
-      {{!-- <button type="button" onclick="" value="Wish Now" </a>
-    </nav>
-
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      <div class="parallax-container">
-        <img src="/images/flower-gift.jpg" class="homeimage" alt="WishDash">
-      </div>
-      <br><br>
-      <div class="hi">
-        {{{ body }}}
-      </div>
-    </main> --}}
-
-    {{!-- Jess: how do I call the join gift exchange handlebar? I will come back to this when I am certain --}}
-    {{!-- <aside>
-      <div class="" </aside> --}}
-
-
-        {{!--
-        <a href="/login">login</a>
-
-        </nav> --}}
-
-        <!-- Render script for logged in users only -->
-        {{!-- {{#if logged_in}}
-        <script src="/js/logout.js"></script>
-        {{/if}} --}}
-        {{!--
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/init.js"></script> --}}
-
-        {{!--
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, options);
-          });
-        </script> --}}
-
-        {{!-- original script tag
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> --}}
 
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="/js//materialize/materialize.js"></script>

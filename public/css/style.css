@@ -128,11 +128,18 @@ p {
 }
 
 
-#parallax-img, #gold-gift, #pink-gift, #tree-gift, #gifts1 {
+#parallax-img, #pink-gift, #tree-gift, #gifts1 {
     opacity: 100%;
-    zoom:10%;
+    zoom: 10%;
 }
 
+#bell-gift {
+  zoom: 25%;
+}
+
+.header h2 {
+
+}
 
 .icon-block {
   padding: 0 15px;
