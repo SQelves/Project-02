@@ -11,7 +11,7 @@ submitBtn.addEventListener('click', function(event){
     
     console.log('Submit Button Clicked!')
     let postRoute = "/api/gifts/newGift";
-    console.log(`Gift Name: ${giftName} Gift Desc: ${giftDesc}`);
+
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", postRoute, true);
