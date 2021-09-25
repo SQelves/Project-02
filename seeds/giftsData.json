@@ -1,15 +1,13 @@
 [
-    {
-      "name": "Reflections Print - Sun & Moon Minimalist Landscape, Day and Night, Blue Nature Wall Art / 11x11, 22x22",
-      "description": "The Reflections print was originally created by Dangerdust©️ all rights reserved."
-    },
-    {
-      "name": "Monogram Pint Glass Set - Diamond, set of 6",
-      "description": "Add your personalization. Please provide us with the one, two, or three letters you'd like"
-    },
-    {
-      "name": "Hammer",
-      "description": "Add your personalization."
-    }
+  {
+    "firstName": "Billy",
+    "lastName": "Smith",
+    "giftName": "Model Train Set"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "giftName": "Book on Boats"
+  }
 ]
   

@@ -5,19 +5,19 @@ class Exchanges extends Model {}
 
 Exchanges.init(
     {
-        exchangeName: {
+        firstName: {
             type: DataTypes.STRING,
             primaryKey: true,
         },
         
 
         
-        exchangeOrg: {
+        lastName: {
             type: DataTypes.STRING,
             primaryKey: true,
         },
-        exchangeBudget:{
-            type: DataTypes.INTEGER,
+        desc:{
+            type: DataTypes.STRING,
             primaryKey: true,
         },
     },

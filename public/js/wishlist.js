@@ -13,9 +13,10 @@ const displayGifts = function(){
     function(response){
       response.json().then(function(data){
         for(i=0;i<data.length;i++){
-          var giftName = data[i].name;
-          var giftDesc = data[i].description;
-          giftItem = `Gift Name: ${giftName} Description: ${giftDesc}`;
+          var giftFN = data[i].firstName;
+          var giftLN = data[i].lastName;
+          var giftName = data[i].giftName;
+          giftItem = `User: ${giftFN} ${giftLN} Gift: ${giftName}`;
           console.log(giftItem);
           var appendItem = document.createElement('li');
           appendItem.innerHTML = giftItem;

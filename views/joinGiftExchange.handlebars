@@ -1,28 +1,17 @@
 <div class="formContainer card">
-        <form id="userForm" class="card-content">
-            <span class="card-title">Join An Existing Gift Exchange</span>
+        <form id="createWishlist" class="card-content">
+            <span class="card-title">Create a wishlist</span>
             <label for="userFirstName">First Name</label>
             <input type="text" id="userFirstName">
             <br>
             <label for="userLastName">Last Name</label>
             <input type="text" id="userLastName">
             <br>
-            <label for="dashesList">Choose Exchange</label>
-            <select id="dashesList" name="dashesList">
-            </select>
-
+            <label for="userDesc">Please give a brief description of yourself</label>
             <br>
-            <label for="giftName">Gift Name</label>
-            <input type="text" id="giftName">
+            <textarea name="userDesc" id="userDesc" cols="30" rows="10"></textarea>
             <br>
-            <label for="giftDesc">Please give a brief description of your gift</label>
-            <br>
-            <textarea name="giftDesc" id="giftDesc" cols="30" rows="10"></textarea>
-            <br>
-            <label for="price">Price: $</label>
-            <input type="number" id="price">
-            <br>
-            <button id="joinExchangeBtn" class="btn-large waves-effect waves-light green darken-4">Submit</button>
+            <button id="createListBtn" class="btn-large waves-effect waves-light green darken-4">Submit</button>
 
         </form>
 

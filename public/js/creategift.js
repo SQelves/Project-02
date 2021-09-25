@@ -1,10 +1,12 @@
 
-console.log("Gift Exchange Script attached");
+console.log("Gift Script attached");
 
 const submitBtn = document.getElementById('joinExchangeBtn');
 
 submitBtn.addEventListener('click', function(event){
     event.preventDefault();
+    var userFist = document.getElementById('userFirstName').value;
+    var userLast = document.getElementById('userLastName').value;
     var giftName = document.getElementById('giftName').value;
     var giftDesc = document.getElementById('giftDesc').value;
     console.log('Submit Button Clicked!')
@@ -15,8 +17,9 @@ submitBtn.addEventListener('click', function(event){
     xhr.open("POST", postRoute, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
-        name: giftName,
-        description: giftDesc
+        firstName: userFist,
+        lastName: userLast,
+        giftName: giftName
     }));
 
 });

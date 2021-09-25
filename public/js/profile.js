@@ -1,48 +1,36 @@
-const profileFormHandler = async (event) => {
-  event.preventDefault();
+var dynamicName = document.getElementById('dynamicName').innerHTML;
+var giftsUl = document.getElementById('giftsUl');
+console.log(dynamicName);
 
-  const name = document.querySelector('#profileName').value.trim();
-  const wishlist = document.querySelector('#profileWishlist').value.trim();
-  const giftExchanges = document.querySelector('#profileGiftExchanges').value.trim();
-  const giftIdeas = document.querySelector('#profileGiftIdeas').value.trim();
 
-  if (name && wishlist && giftExchanges && giftIdeas) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, wishlist, giftExchanges, giftIdeas }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-  if (response.ok) {
-    document.location.replace('/profile');
-  } else {
-     alert('Failed to create wishlist');
+const displayGifts = function(){
+  fetch('/api/gifts/displayGifts',{
+    "method": "GET",
+    "headers": {
+      'Content-Type': 'application/json'
     }
-  }
-};
-
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('list-id')) {
-    const id = event.target.getAttribute('list-id');
-
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete wishlist');
+  })
+  .then(
+    function(response){
+      response.json().then(function(data){
+        console.log(data);
+        for(i=0;i<data.length;i++){
+          var giftFN = data[i].firstName;
+          var giftLN = data[i].lastName;
+          var giftFullName = `${giftFN} ${giftLN}`;
+          var giftNm = data[i].giftName;
+          var appendItem = document.createElement('li');
+          if(giftFullName===dynamicName){
+            appendItem.innerHTML = giftNm
+            giftsUl.appendChild(appendItem);
+          }
+        }
+      });
     }
-  }
-};
+  )
+  .catch(function(err){
+    console.log('Fetch Error :-S', err);
+  });
+}
 
-document
-  .querySelector('#new-profile-form')
-  .addEventListener('submit', profileFormHandler);
-
-document
-  .querySelector('#profile-list')
-  .addEventListener('click', delButtonHandler);
+displayGifts();

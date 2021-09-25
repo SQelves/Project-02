@@ -56,7 +56,16 @@ router.get('/createGiftExchange', (req, res)=>{
 });
 
 router.get('/wishlist', (req, res)=>{
-  res.render('wishlist')
+  if (req.session.logged_in) {
+    res.render('wishlist', {
+      // user,
+      // logged_in: true,
+      
+    });
+    return;
+  }
+
+  res.redirect('/login');
 });
 
 router.get('/joinGiftExchange', (req, res)=>{
