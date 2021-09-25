@@ -8,7 +8,7 @@ submitBtn.addEventListener('click', function(event){
     var userFist = document.getElementById('userFirstName').value;
     var userLast = document.getElementById('userLastName').value;
     var giftName = document.getElementById('giftName').value;
-    var giftDesc = document.getElementById('giftDesc').value;
+    
     console.log('Submit Button Clicked!')
     let postRoute = "/api/gifts/newGift";
     console.log(`Gift Name: ${giftName} Gift Desc: ${giftDesc}`);
