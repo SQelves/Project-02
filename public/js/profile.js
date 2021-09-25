@@ -1,3 +1,4 @@
+console.log('proflie script attached')
 var dynamicName = document.getElementById('dynamicName').innerHTML;
 var giftsUl = document.getElementById('giftsUl');
 console.log(dynamicName);
@@ -22,6 +23,7 @@ const displayGifts = function(){
           var appendItem = document.createElement('li');
           if(giftFullName===dynamicName){
             appendItem.innerHTML = giftNm
+            appendItem.setAttribute('class', 'collection-item')
             giftsUl.appendChild(appendItem);
           }
         }
