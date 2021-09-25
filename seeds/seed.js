@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, Gifts } = require('../models');
+const { User, Gifts, Exchange } = require('../models');
 
 const userData = require('./userData.json');
-const listData = require('./listData.json');
+const listData = require('./exchangeData.json');
 const giftsData = require('./giftsData.json');
 
 const seedDatabase = async () => {
@@ -29,6 +29,8 @@ const seedDatabase = async () => {
       console.log(err);
     })
   }
+  
+ 
 
   process.exit(0);
 };

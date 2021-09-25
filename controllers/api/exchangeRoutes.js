@@ -5,9 +5,9 @@ const Exchange = require('../../models/Exchange');
 router.post('/newExchange', (req, res) =>{
     console.log(req.body);
     Exchange.create({
-        exchangeName: req.body.exchangeName,
-        exchangeOrg: req.body.exchangeOrg,
-        exchangeBudget: req.body.exchangeBudget
+       firstName: req.body.firstName,
+       lastName: req.body.lastName,
+       desc: req.body.desc,
     })
     .then((newExchange)=>{
         console.log('Route Hit');

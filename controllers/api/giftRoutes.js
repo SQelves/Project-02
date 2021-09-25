@@ -4,8 +4,9 @@ const Gift = require('../../models/Gifts');
 router.post('/newGift', (req, res)=>{
     console.log(req.body);
     Gift.create({
-        name: req.body.name,
-        description: req.body.description
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        giftName: req.body.giftName
     })
     .then((newGift)=>{
         console.log("Route Hit");

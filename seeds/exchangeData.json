@@ -1,0 +1,18 @@
+[
+    {
+        "firstName": "Billy",
+        "lastName": "Smith",
+        "desc": "I like model trains!"
+    },
+    {
+        "firstName": "Jimmy",
+        "lastName": "Johnson",
+        "desc": "I like model racecars!"
+    },
+    {
+        "firstName": "Sarah",
+        "lastName": "Thomas",
+        "desc": "I like marbels!"
+    }
+    
+]
