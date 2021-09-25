@@ -23,7 +23,6 @@ const displayGifts = function(){
           var appendItem = document.createElement('li');
           if(giftFullName===dynamicName){
             appendItem.innerHTML = giftNm
-            appendItem.setAttribute('class', 'collection-item')
             giftsUl.appendChild(appendItem);
           }
         }
