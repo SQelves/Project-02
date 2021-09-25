@@ -1,24 +1,20 @@
-<div class="row">
+<div class="card">
   <div class="col-auto">
-    <h2>Welcome! View your wishlists below.</h2>
+    <h2 class="card-title center">Welcome, {{user.name}}!</h2>
+    <ul id="giftsUl"></ul>
   </div>
 </div>
 
-  
-  <div class="col-md-6 project-list">
-    <h3>Exchange Name</h3>
+<div class="card">
+  <div class="project-list">
+    <h3 class="card-title">Exchange Name</h3>
 
-   
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4>Gifts</h4>
+    <div class="card-content">
+        <h4 class="card-title">Gifts</h4>
         <ul id="giftList"></ul>
-        
-      </div>
     </div>
    
   </div>
-  
-</div>
+</div> 
 
 <script src="/js/wishlist.js"></script>

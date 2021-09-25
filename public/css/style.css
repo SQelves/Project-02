@@ -133,6 +133,10 @@ p {
     zoom: 10%;
 }
 
+#wishBtnProf {
+  margin-right: 20px;
+}
+
 #bell-gift {
   opacity: 100%;
   zoom:80%;
